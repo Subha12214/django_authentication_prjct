@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <center>
+        <h1>ADD PAGE</h1>
+        <form action="" method="POST">
+           {% csrf_token %}
+           <label for="">Enter the Title:</label>
+           <input type="text" name="title" id="">
+           <br><br>
+           <label for="">Enter the Desc:</label>
+           <input type="text" name="desc" id="">
+           <br><br>
+           <button type="submit">SUBMIT</button>
+        </form>
+    </center>
+{% endblock %}

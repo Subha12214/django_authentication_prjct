@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <center>
+       <h1>TRASH PAGE</h1>
+       {% for i in data %}
+         <h1>{{i.title}} // {{i.desc}}</h1>
+          {{i.is_delete}} {{i.is_complete}}
+        <a href="{% url 'delete_t' i.id %}">DELETE</a>
+        <a href="{% url 'restore_t' i.id %}">RESTORE</a>
+        {% endfor %}
+    </center>
+{% endblock %}
